@@ -13,7 +13,10 @@
     <div class="form-container">
         <h2>EMBEDDED SYS & IOT - (SALEM)</h2>
 
-        <form action="https://formspree.io/f/xblknwov" method="POST" enctype="multipart/form-data">
+        <!-- Netlify form setup -->
+        <form name="attendance-form" method="POST" data-netlify="true" enctype="multipart/form-data">
+            <!-- Hidden input required by Netlify -->
+            <input type="hidden" name="form-name" value="attendance-form">
 
             <!-- Name -->
             <div class="form-group">
