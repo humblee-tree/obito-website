@@ -1,31 +1,305 @@
+/* General Reset */
+•⁠  ⁠{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
-h1 {
-    padding: 20px;
-    font-size: 2.5em;
-    color: #e74c3c;
+
+.form-container {
+  background: #fff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.7s ease-in-out;
 }
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
 }
-.gallery img {
-    width: 300px;
-    height: auto;
-    border: 3px solid #fff;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
+
+.form-group {
+  margin-bottom: 16px;
 }
-.gallery img:hover {
-    transform: scale(1.1) rotate(2deg);
-    box-shadow: 0 0 20px #e74c3c;
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+.Name{
+    margin-top: 20px;
+    text-align: right;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="file"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37,117,252,0.3);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+/* Form group layout */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Input & dropdown styling */
+input[list],
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+input[list]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+  border-color: #2575fc;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.25);
+}
+
+/* Add consistent spacing for better alignment */
+input[list]::placeholder {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Dropdown styling */
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+select:focus {
+  border-color: #2575fc;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.25);
+  outline: none;
+}/* General Reset */
+•⁠  ⁠{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-container {
+  background: #fff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+.Name{
+    margin-top: 20px;
+    text-align: right;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="file"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37,117,252,0.3);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+/* Form group layout */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Input & dropdown styling */
+input[list],
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+input[list]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+  border-color: #2575fc;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.25);
+}
+
+/* Add consistent spacing for better alignment */
+input[list]::placeholder {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Dropdown styling */
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+select:focus {
+  border-color: #2575fc;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.25);
+  outline: none;
 }
