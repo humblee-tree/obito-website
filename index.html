@@ -1,18 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obito Uchiha Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Attendance Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your own CSS file here -->
 </head>
+
 <body>
-    <h1>Obito Uchiha Gallery</h1>
-    <div class="gallery">
-        <img src="assets/obito1.jpg" alt="Obito Image 1">
-        <img src="assets/obito2.jpg" alt="Obito Image 2">
-        <img src="assets/obito3.jpg" alt="Obito Image 3">
+
+    <div class="form-container">
+        <h2>EMBEDDED SYS & IOT - (SALEM)</h2>
+
+        <form action="https://formspree.io/f/xblknwov" method="POST" enctype="multipart/form-data">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- College Name -->
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input list="college-list" id="college" name="college" placeholder="Select or type your college" required>
+
+                <datalist id="college-list">
+                    <option value="Shree Sathyam College of Engineering and Technology">
+                    <option value="GOVERNMENT COLLEGE OF ENGINEERING - SALEM">
+                    <option value="AVS Engineering College - (Batch 1)">
+                    <option value="AVS Engineering College - (Batch 2)">
+                    <option value="AVS Engineering College - (Batch)">
+                    <option value="Bharathiyar Institute of Engineering for Women">
+                    <option value="Ganesh College of Engineering">
+                    <option value="MAHENDRA COLLEGE OF ENGINEERING">
+                    <option value="SALEM COLLEGE OF ENGINEERING AND TECHNOLOGY -(Batch 1)">
+                    <option value="SALEM COLLEGE OF ENGINEERING AND TECHNOLOGY -(Batch 2)">
+                    <option value="Tagore Institute of Engineering and Technology">
+                    <option value="VSA GROUP OF INSTITUTIONS">
+                    <option value="AVS COLLEGE OF TECHNOLOGY">
+                </datalist>
+            </div>
+
+            <!-- Attendance File -->
+            <div class="form-group">
+                <label for="attendance">Attendance File (PDF/Image)</label>
+                <input type="file" id="attendance" name="attendance_file" accept=".pdf,.jpg,.png,.jpeg" required>
+            </div>
+
+            <!-- Geo-tag Image -->
+            <div class="form-group">
+                <label for="geoImage">Geo-tag Image</label>
+                <input type="file" id="geoImage" name="geo_image" accept="image/*" required>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <!-- Day -->
+            <div class="form-group">
+                <label for="day">Day</label>
+                <select id="day" name="day" required>
+                    <option value="" disabled selected>Select Day</option>
+                    <option value="Day 1">Day 1</option>
+                    <option value="Day 2">Day 2</option>
+                    <option value="Day 3">Day 3</option>
+                    <option value="Day 4">Day 4</option>
+                    <option value="Day 5">Day 5</option>
+                    <option value="Day 6">Day 6</option>
+                    <option value="Day 7">Day 7</option>
+                    <option value="Day 8">Day 8</option>
+                    <option value="Day 9">Day 9</option>
+                    <option value="Day 10">Day 10</option>
+                    <option value="Day 11">Day 11</option>
+                    <option value="Day 12">Day 12</option>
+                </select>
+            </div>
+
+            <!-- Optional redirect after submit -->
+            <input type="hidden" name="_next" value="https://your-redirect-page.com/thank-you.html">
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+
+        <h6 class="Name">Gowtham</h6>
     </div>
-    <script src="script.js"></script>
+
 </body>
+
 </html>
