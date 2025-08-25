@@ -5,7 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Form</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link your own CSS file here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 2px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        h6.Name {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,10 +65,8 @@
     <div class="form-container">
         <h2>EMBEDDED SYS & IOT - (SALEM)</h2>
 
-        <!-- Netlify form setup -->
-        <form name="attendance-form" method="POST" data-netlify="true" enctype="multipart/form-data">
-            <!-- Hidden input required by Netlify -->
-            <input type="hidden" name="form-name" value="attendance-form">
+        <!-- Formspree Form -->
+        <form action="https://formspree.io/f/meoljnlv" method="POST" enctype="multipart/form-data">
 
             <!-- Name -->
             <div class="form-group">
@@ -28,7 +78,6 @@
             <div class="form-group">
                 <label for="college">College Name</label>
                 <input list="college-list" id="college" name="college" placeholder="Select or type your college" required>
-
                 <datalist id="college-list">
                     <option value="Shree Sathyam College of Engineering and Technology">
                     <option value="GOVERNMENT COLLEGE OF ENGINEERING - SALEM">
@@ -88,7 +137,7 @@
             <input type="hidden" name="_next" value="https://your-redirect-page.com/thank-you.html">
 
             <!-- Submit Button -->
-            <button type="submit" class="btn-submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
 
         <h6 class="Name">Gowtham</h6>
